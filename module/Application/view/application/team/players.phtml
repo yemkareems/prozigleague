@@ -1,0 +1,37 @@
+<h3>Players</h3>
+
+<table id="tblList" class="tbl">
+    <thead class="trHead">
+    <tr>
+        <th width="50%">Player Name</th>
+        <th width="50%">Photo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+        foreach ($this->list as $item) {
+    ?>
+            <tr>
+                <td><?php echo $item['firstname']. ' '.$item['lastname']; ?></td>
+                <td><img src="<?php echo $item['image']; ?>" ></td>
+            </tr>
+
+
+    <?php
+
+        }
+    ?>
+
+    </tbody>
+</table>
+
+<script>
+    $('#tblList').dataTable({
+        paginate : true,
+        ordering : true,
+        info : true,
+        filter : true,
+        retrieve : true
+    });
+
+</script>

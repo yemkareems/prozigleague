@@ -1,0 +1,35 @@
+<?php
+
+namespace Application\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TeamPlayerMapping
+ *
+ * @ORM\Table(name="team_player_mapping", indexes={@ORM\Index(name="team_id", columns={"team_id"}), @ORM\Index(name="player_id", columns={"player_id"})})
+ * @ORM\Entity
+ */
+class TeamPlayerMapping
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="team_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $teamId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="player_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $playerId;
+
+
+}
+
