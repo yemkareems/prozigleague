@@ -56,10 +56,19 @@ return array(
             'team-list' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => "/application/team/list",
+                    'route'    => "/team/list",
                     'defaults' => array(
                         'controller' => 'Application\Controller\Team',
                         'action'     => 'list',
+                    ),
+                ),
+            ),
+            'player-list' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route'    => "/team/players/:id",
+                    'constraints' => array(
+                        'id' => '\d{4}'
                     ),
                 ),
             ),
