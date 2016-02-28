@@ -1,4 +1,10 @@
 
+
+    Set up db
+    In config/autoload/doctrine.global.php give correct db credentials
+
+    Set up apache vhost
+
  <VirtualHost *:8080>
         ServerName prozigleague.localhost
         DocumentRoot "D:/xampp/htdocs/prozigleague/public"
@@ -12,5 +18,9 @@
             </IfModule>
         </Directory>
     </VirtualHost>
+
+    Add prozigleague.localhost to etc/hosts
+
+    restart apache
 
 
