@@ -10,7 +10,7 @@
 namespace Application;
 
 return array(
-    'server' => 'http://zf2-app.localhost:8080',
+    'server' => 'http://prozigleague.localhost:8080',
     'router' => array(
         'routes' => array(
             'home' => array(
