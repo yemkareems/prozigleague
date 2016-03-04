@@ -39,20 +39,15 @@ class TeamControllerTest extends \PHPUnit_Framework_TestCase
     public function testListActionCanBeAccessed()
     {
         $this->routeMatch->setParam('action', 'list');
-
         $result   = $this->controller->dispatch($this->request);
         $response = $this->controller->getResponse();
-
         $this->assertEquals(200, $response->getStatusCode(), 'response code is not 200');
     }
     
     public function testListActionDoesntReturnNull(){
         $this->routeMatch->setParam('action', 'list');
-
         $result   = $this->controller->dispatch($this->request);
         $response = $this->controller->getResponse();
-        
-
         $this->assertNotNull($response->getContent(), 'null is returned');
     }
 }
