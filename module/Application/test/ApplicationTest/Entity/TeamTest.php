@@ -40,7 +40,6 @@ class TeamTest extends \PHPUnit_Framework_TestCase{
   }
   public function testCanGetUserById()
   {
-    // Create a dummy user entity
     $mockTeam = new \Application\Entity\Team();
     $mockTeam->setName('david');
     $mockTeam->setUri('img/team/david.jpg');
@@ -51,18 +50,12 @@ class TeamTest extends \PHPUnit_Framework_TestCase{
         ->method('findOneBy')
         ->will($this->returnValue($mockTeam));
 
-    // Mock the entity manager, find should return our dummy user
-
-
-    // Create a new instance of the user service injecting our mocked entity manager
-    $team = $this->em->findOneBy(array('name' => 'david' ),array("id" => "DESC"));
-
+    $team = $this->em->findOneBy(array('name' => 'testTeam' ),array("id" => "DESC"));
 
     // Check the response is a user entity
     $this->assertInstanceOf('Application\Entity\Team', $team, 'f1 failed');
 
     // Check that the returned entity is our dummy user
     $this->assertEquals('david', $team->getName(), 'f2 failed');
-
-}
+  }
 }
