@@ -7,8 +7,8 @@
 
  <VirtualHost *:8080>
         ServerName prozigleague.localhost
-        DocumentRoot "D:/xampp/htdocs/prozigleague/public"
-        <Directory D:/xampp/htdocs/prozigleague/public>
+        DocumentRoot "/var/www/prozigleague/public"
+        <Directory /var/www/prozigleague/public>
             DirectoryIndex index.php
             AllowOverride All
             Order allow,deny
