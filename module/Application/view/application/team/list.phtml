@@ -16,13 +16,9 @@
                 <td><img height="50" width="50" src="<?php echo $item['image']; ?>" ></td>
                 <td><a href="<?php echo $this->url('player-list', array('id' => $item['id'])); ?>">Players</a></td>
             </tr>
-
-
     <?php
-
         }
     ?>
-
     </tbody>
 </table>
 
@@ -34,5 +30,4 @@
         filter : true,
         retrieve : true
     });
-
 </script>
