@@ -41,8 +41,8 @@ class TeamTest extends \PHPUnit_Framework_TestCase{
   public function testCanGetUserById()
   {
     $mockTeam = new \Application\Entity\Team();
-    $mockTeam->setName('david');
-    $mockTeam->setUri('img/team/david.jpg');
+    $mockTeam->setName('testTeam');
+    $mockTeam->setUri('img/team/testTeam.jpg');
     $this->em->flush();
 
     $this->em
